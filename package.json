@@ -1,0 +1,39 @@
+{
+  "name": "typed-reactor",
+  "version": "1.0.0",
+  "description": "Learning React with Typescript",
+  "repository": {},
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "bundle": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-loader": "^8.0.4",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.3",
+    "axios": "^0.18.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
+  }
+}
